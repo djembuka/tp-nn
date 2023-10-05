@@ -1,0 +1,1 @@
+window.addEventListener("load",function(){var e=window.location.href.split("/").reverse(),t=e[0]||e[1],i=window.sessionStorage.getItem("detailObject")?JSON.parse(window.sessionStorage.getItem("detailObject")):{};i[t]="visited",window.sessionStorage.setItem("detailObject",JSON.stringify(i))});
