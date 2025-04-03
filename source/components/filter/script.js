@@ -885,14 +885,19 @@
 
             if (element.Finished === 'Y') {
               finished =
-                '<td class="b-filter-table__finished"><img src="/template/images/finished.svg" title="Отделка завершена" alt="" width="30" height="30">';
+                '<td class="b-filter-table--icons b-filter-table__finished"><img src="/template/images/finished.svg" title="Отделка завершена" alt="" width="30" height="30">';
             } else {
-              finished = '<td>';
+              finished = '<td class="b-filter-table--icons">';
             }
 
             if (typeof element.OldPriceFormat !== 'undefined') {
               finished +=
                 '<img src="/template/images/icon-sale.svg" title="Квартира участвует в акции" alt="" width="30" height="30">';
+            }
+
+            if (typeof element.Tradein !== 'undefined') {
+              finished +=
+                '<img src="/template/images/tradein.svg" title="Trade-in" alt="" width="30" height="30">';
             }
 
             finished += '</td>';
